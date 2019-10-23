@@ -1,0 +1,341 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+}
+body {
+  background: #efefef;
+}
+body main {
+  margin-top: -340px;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: -0.15em;
+  fill: white;
+  overflow: hidden;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.banner {
+  background-image: url(../img/background-cover.jpg);
+  background-size: cover;
+  height: 515px;
+  background-position: center center;
+}
+.banner .banner-in {
+  height: 515px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.topNavBar {
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.topNavBar > a {
+  float: left;
+}
+.topNavBar > nav {
+  float: right;
+  padding-top: 6px;
+  padding-bottom: 5px;
+}
+.topNavBar nav ul li {
+  float: left;
+  margin: 0 40px;
+}
+.topNavBar nav ul li a {
+  font-size: 14px;
+  color: #c0c2c5;
+  font-weight: bold;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  padding: 8px 0;
+  display: block;
+  transition: all 0.3s;
+}
+.topNavBar nav ul li a:hover {
+  border-bottom: 3px solid #e6686d;
+}
+.topNavBar .logo {
+  padding: 0px 15px;
+}
+.topNavBar .logo .eden {
+  font-size: 40px;
+  color: #e6686d;
+  font-weight: 100;
+  font-family: "Bradley Hand";
+}
+.topNavBar .logo .sheng {
+  font-size: 24px;
+  color: #9a9da2;
+  font-weight: 600;
+  font-family: "Bradley Hand";
+}
+.userCard {
+  max-width: 930px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #ffffff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+.userCard h1 {
+  color: #3d4450;
+  padding: 31px 0 10px 0;
+  font-family: "kai";
+}
+.userCard .pictureAndText {
+  padding: 50px 50px;
+}
+.userCard .picture {
+  float: left;
+}
+.userCard .picture img {
+  width: 325px;
+  height: 325px;
+}
+.userCard .text {
+  float: left;
+  margin-left: 75px;
+  max-width: 400px;
+}
+.userCard .text p {
+  color: #3d4450;
+  font-family: "kai";
+}
+.userCard .text hr {
+  margin: 25px 0 20px 0;
+  height: 0;
+  width: 380px;
+  border: none;
+  border-top: 1px solid #dedede;
+}
+.userCard dl dt,
+.userCard dl dd {
+  float: left;
+  padding: 5px 0;
+  font-size: 14px;
+}
+.userCard dl dt {
+  width: 30%;
+  color: #333333;
+  line-height: 20px;
+}
+.userCard dl dd {
+  width: 70%;
+  color: #9da0a7;
+  line-height: 20px;
+  font-family: "Kai";
+}
+.userCard .text .welcome {
+  background: #e3676c;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  color: #fefefe;
+  line-height: 22px;
+  padding: 6px 15px;
+  position: relative;
+}
+.userCard .text .welcome .triangle {
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 4px;
+  border: 5px solid #e3676c;
+  width: 0;
+  height: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+}
+.userCard .media {
+  background: #e6686d;
+  text-align: center;
+}
+.userCard .media a {
+  display: inline-block;
+  border-radius: 50%;
+  width: 50px;
+  padding: 15px 0;
+  line-height: 20px;
+  transition: all 0.4s;
+  margin: 18px 16px;
+}
+.userCard .media a:hover {
+  background: #cf5d62;
+}
+.userCard .media svg {
+  vertical-align: top;
+}
+body main .download {
+  text-align: center;
+  margin: 35px 0;
+}
+body main .downloadResume {
+  font-size: 14px;
+  color: #3d4450;
+  background: #efefef;
+  border: 1px solid #cbcdcf;
+  border-radius: 3px;
+  line-height: 16px;
+  padding: 21px 55px;
+  display: inline-block;
+  transition: all 0.4s;
+  font-family: "Kai";
+  font-weight: bold;
+}
+body main .downloadResume:hover {
+  box-shadow: 0px 5px 11px 0px rgba(0, 0, 0, 0.18),
+    0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+body main .selfIntroduction {
+  max-width: 930px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: "Kai";
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 40px;
+}
+section.skills {
+  max-width: 930px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+}
+section.skills > h2 {
+  text-align: center;
+  color: #3d4450;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+section.skills ol {
+  background: #ffffff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  padding: 40px 45px 5px 45px;
+}
+section.skills ol li {
+  float: left;
+  width: 48%;
+  box-sizing: border-box;
+}
+section.skills ol li:nth-child(even) {
+  float: right;
+}
+section.skills ol li h3 {
+  color: #3d4450;
+  font-size: 14px;
+  line-height: 1.1;
+}
+section.skills ol li .progressBar {
+  height: 5px;
+  background: #fae1e2;
+  border-radius: 2px;
+  margin: 4px 0 40px 0;
+}
+section.skills ol li .progressBar .progress {
+  height: 100%;
+  background: #e6686d;
+  width: 50%;
+  border-radius: 2px;
+}
+section.portfolio {
+  max-width: 930px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  margin-bottom: 200px;
+}
+section.portfolio > h2 {
+  text-align: center;
+  color: #3d4450;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+section.portfolio{
+  text-align: center;
+}
+section.portfolio nav{
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+}
+section.portfolio nav ol{
+  display: inline-block;
+  vertical-align: top;
+  padding-bottom: 10px;
+}
+section.portfolio nav ol li{
+  float: left;
+  margin-left: 40px;
+  font-size: 13px;
+  cursor: pointer;
+}
+section.portfolio nav ol li:nth-child(1){
+  margin: 0;
+}
+section.portfolio nav .bar{
+  height: 5px;
+  background: #ffffff;
+  border-radius: 2px;
+  margin-bottom: 30px;
+}
+section.portfolio nav .bar #barInner{
+  transition: 0.2s;
+}
+section.portfolio nav .bar #barInner.stateOne{
+  height: 100%;
+  background: #e6686d;
+  width: 50px;
+  border-radius: 2px;
+}
+section.portfolio nav .bar #barInner.stateTwo{
+  height: 100%;
+  background: #e6686d;
+  margin-left: 50px;
+  width: 75px;
+  border-radius: 2px;
+}
+section.portfolio nav .bar #barInner.stateThree{
+  height: 100%;
+  background: #e6686d;
+  margin-left: 125px;
+  width: 109px;
+  border-radius: 2px;
+}
+section.portfolio .works{
+  position: relative;
+  height: 576px;
+}
+section.portfolio .works .workOne,
+section.portfolio .works .workTwo,
+section.portfolio .works .workThree{
+  position: absolute;
+}
