@@ -1,3 +1,9 @@
+setTimeout(
+    function () {
+        guide.classList.remove("active");
+    }, 1500
+)
+
 portfolioAll.onclick = function () {
     barInner.className = 'stateOne'
 }
