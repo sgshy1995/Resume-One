@@ -24,6 +24,16 @@ body {
 body main {
   margin-top: -340px;
 }
+[data-high].active{
+  outline: 5px solid wheat;
+}
+[data-high].offset{
+  transform: translateY(100px);
+}
+[data-high]{
+  transform: translateY(0);
+  transition: all 0.3s;
+}
 .icon {
   width: 20px;
   height: 20px;
@@ -47,11 +57,21 @@ body main {
   background-color: rgba(0, 0, 0, 0.6);
 }
 .topNavBar {
-  padding: 10px 0;
+  padding: 15px 0;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  transition: all 0.5s;
+}
+.topNavBar.sticky {
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19), 0 6px 10px rgba(0, 0, 0, 0.23);
+  padding: 5px 0;
+  z-index: 1;
+}
+.topNavBar.sticky > nav > ul > li > a {
+  color: #3d4450;
 }
 .topNavBar > a {
   float: left;
@@ -61,11 +81,13 @@ body main {
   padding-top: 6px;
   padding-bottom: 5px;
 }
-.topNavBar nav ul li {
+.topNavBar > nav > ul > li {
   float: left;
   margin: 0 40px;
+  position: relative;
+  transition: all 0.3s;
 }
-.topNavBar nav ul li a {
+.topNavBar > nav > ul > li > a {
   font-size: 14px;
   color: #c0c2c5;
   font-weight: bold;
@@ -74,9 +96,27 @@ body main {
   padding: 8px 0;
   display: block;
   transition: all 0.3s;
+  position: relative;
 }
-.topNavBar nav ul li a:hover {
-  border-bottom: 3px solid #e6686d;
+.topNavBar > nav > ul > li.active > a::after,
+.topNavBar > nav > ul > li.highlight > a::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #e6686d;
+  animation: menuSlide 0.3s;
+  border-radius: 2px;
+}
+@keyframes menuSlide {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }
 .topNavBar .logo {
   padding: 0px 15px;
@@ -92,6 +132,46 @@ body main {
   color: #9a9da2;
   font-weight: 600;
   font-family: "Bradley Hand";
+}
+.topNavBar >nav>ul>li .submenu {
+  display: none;
+}
+.topNavBar> nav>ul>li.active .submenu {
+  display: block;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  white-space: nowrap;
+  background: #ffffff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  font-size: 14px;
+  color: #3d4450;
+  line-height: 30px;
+  animation: submenuSlide 0.2s;
+  text-align: right;
+}
+@keyframes submenuSlide{
+  0%{
+    margin-right:100%;
+  }
+  100%{
+    margin-right: 0%;
+  }
+}
+.topNavBar> nav>ul>li .submenu li{
+  padding: 2px 30px;
+  transition: all 0.3s;
+}
+.topNavBar> nav>ul>li .submenu li:first-child{
+  margin: 10px 0 0 0;
+}
+.topNavBar> nav>ul>li .submenu li:last-child{
+  margin: 0 0 10px 0;
+}
+.topNavBar> nav>ul>li .submenu li:hover{
+  background: #fafafa;
+  color: #e6686d;
+  cursor: pointer;
 }
 .userCard {
   max-width: 930px;
@@ -256,12 +336,18 @@ section.skills ol li .progressBar {
   background: #fae1e2;
   border-radius: 2px;
   margin: 4px 0 40px 0;
+  overflow: hidden;
 }
 section.skills ol li .progressBar .progress {
   height: 100%;
   background: #e6686d;
   width: 50%;
   border-radius: 2px;
+  transform: translateX(0);
+  transition: all 0.3s;
+}
+section.skills.offset ol li .progressBar .progress {
+  transform: translateX(-100%);
 }
 section.portfolio {
   max-width: 930px;
@@ -269,6 +355,10 @@ section.portfolio {
   margin-right: auto;
   margin-top: 60px;
   margin-bottom: 200px;
+  text-align: center;
+}
+section.portfolio.offset {
+  transform: translateY(150px);
 }
 section.portfolio > h2 {
   text-align: center;
@@ -279,63 +369,60 @@ section.portfolio > h2 {
   margin-bottom: 30px;
   margin-top: 20px;
 }
-section.portfolio{
-  text-align: center;
-}
-section.portfolio nav{
+section.portfolio nav {
   text-align: center;
   display: inline-block;
   vertical-align: top;
 }
-section.portfolio nav ol{
+section.portfolio nav ol {
   display: inline-block;
   vertical-align: top;
   padding-bottom: 10px;
 }
-section.portfolio nav ol li{
+section.portfolio nav ol li {
   float: left;
   margin-left: 40px;
   font-size: 13px;
   cursor: pointer;
 }
-section.portfolio nav ol li:nth-child(1){
+section.portfolio nav ol li:nth-child(1) {
   margin: 0;
 }
-section.portfolio nav .bar{
+section.portfolio nav .bar {
   height: 5px;
   background: #ffffff;
   border-radius: 2px;
   margin-bottom: 30px;
 }
-section.portfolio nav .bar #barInner{
+section.portfolio nav .bar #barInner {
   transition: 0.2s;
 }
-section.portfolio nav .bar #barInner.stateOne{
+section.portfolio nav .bar #barInner.stateOne {
   height: 100%;
   background: #e6686d;
   width: 50px;
   border-radius: 2px;
 }
-section.portfolio nav .bar #barInner.stateTwo{
+section.portfolio nav .bar #barInner.stateTwo {
   height: 100%;
   background: #e6686d;
   margin-left: 50px;
   width: 75px;
   border-radius: 2px;
 }
-section.portfolio nav .bar #barInner.stateThree{
+section.portfolio nav .bar #barInner.stateThree {
   height: 100%;
   background: #e6686d;
   margin-left: 125px;
   width: 109px;
   border-radius: 2px;
 }
-section.portfolio .works{
+section.portfolio .works {
   position: relative;
   height: 576px;
 }
 section.portfolio .works .workOne,
 section.portfolio .works .workTwo,
-section.portfolio .works .workThree{
+section.portfolio .works .workThree {
   position: absolute;
 }

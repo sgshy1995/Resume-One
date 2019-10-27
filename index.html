@@ -15,20 +15,34 @@
         <div class="loading"></div>
         <p class="textLoading">L o a d i n g . . .</p>
     </div>
-    <div class="topNavBar clearfix">
+    <div id="topNavBar" class="topNavBar clearfix">
         <a href="" class="logo">
             <span class="eden">EDEN</span>
             <span class="sheng">SHENG</span>
         </a>
-        <nav>
+        <nav class="menu">
             <ul class="clearfix">
-                <li><a href="">关 于</a></li>
-                <li><a href="">技 能</a></li>
-                <li><a href="">作 品</a></li>
-                <li><a href="">博 客</a></li>
-                <li><a href="">G I T</a></li>
-                <li><a href="">联 系</a></li>
-                <li><a href="">其 他</a></li>
+                <li class="highlight"><a href="#about">关 于</a></li>
+                <li><a href="#skills">技 能</a></li>
+                <li class="menuTrigger">
+                    <a href="#portfolio">作 品</a>
+                    <ul class="submenu">
+                        <li>参 与 项 目</li>
+                        <li>框 架</li>
+                        <li>CSS 动 画</li>
+                    </ul>
+                </li>
+                <li><a href="#blog">博 客</a></li>
+                <li class="menuTrigger">
+                    <a href="#story">经 历</a>
+                    <ul class="submenu">
+                        <li>教 育 经 历</li>
+                        <li>工 作 与 求 职</li>
+                        <li>学 习 路 线</li>
+                    </ul>
+                </li>
+                <li><a href="#github">G I T</a></li>
+                <li><a href="#others">其 他</a></li>
             </ul>
         </nav>
     </div>
@@ -36,7 +50,7 @@
         <div class="banner-in"></div>
     </div>
     <main>
-        <div class="userCard">
+        <div data-high id="about" class="userCard">
             <div class="pictureAndText clearfix">
                 <div class="picture">
                     <img src="./img/avator.jpg" alt="touXiang">
@@ -107,7 +121,7 @@
 
     </main>
 
-    <section class="skills">
+    <section data-high id="skills" class="skills">
         <h2>个 人 技 能</h2>
         <ol class="clearfix">
             <li>
@@ -148,7 +162,8 @@
             </li>
         </ol>
     </section>
-    <section class="portfolio">
+
+    <section data-high id="portfolio" class="portfolio">
         <h2>作 品 集</h2>
         <nav class="clearfix">
             <ol>
@@ -175,6 +190,7 @@
 
     </section>
 </body>
+<script src="https://cdn.bootcss.com/tween.js/r14/Tween.min.js"></script>
 <script src="./js/main.js"></script>
 <script src="//at.alicdn.com/t/font_1471429_epr33qww6s.js"></script>
 
