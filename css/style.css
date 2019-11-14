@@ -20,6 +20,7 @@ a {
 }
 body {
   background: #efefef;
+  padding-bottom: 100px;
 }
 body main {
   margin-top: -340px;
@@ -341,11 +342,29 @@ section.skills ol li .progressBar {
 section.skills ol li .progressBar .progress {
   height: 100%;
   background: #e6686d;
-  width: 50%;
   border-radius: 2px;
   transform: translateX(0);
   transition: all 0.3s;
 }
+section.skills ol #proOne{
+  width: 80%;
+}
+section.skills ol #proTwo{
+  width: 70%;
+}
+section.skills ol #proThree{
+  width: 60%;
+}
+section.skills ol #proFour{
+  width: 60%;
+}
+section.skills ol #proFive{
+  width: 60%;
+}
+section.skills ol #proSix{
+  width: 50%;
+}
+
 section.skills.offset ol li .progressBar .progress {
   transform: translateX(-100%);
 }
@@ -354,7 +373,7 @@ section.portfolio {
   margin-left: auto;
   margin-right: auto;
   margin-top: 60px;
-  margin-bottom: 200px;
+  margin-bottom: 30px;
   text-align: center;
 }
 section.portfolio.offset {
@@ -392,37 +411,173 @@ section.portfolio nav .bar {
   height: 5px;
   background: #ffffff;
   border-radius: 2px;
-  margin-bottom: 30px;
 }
 section.portfolio nav .bar #barInner {
   transition: 0.2s;
 }
-section.portfolio nav .bar #barInner.stateOne {
+section.portfolio nav .bar #barInner.state0 {
   height: 100%;
   background: #e6686d;
   width: 50px;
   border-radius: 2px;
 }
-section.portfolio nav .bar #barInner.stateTwo {
+section.portfolio nav .bar #barInner.state1 {
   height: 100%;
   background: #e6686d;
   margin-left: 50px;
   width: 75px;
   border-radius: 2px;
 }
-section.portfolio nav .bar #barInner.stateThree {
+section.portfolio nav .bar #barInner.state2 {
   height: 100%;
   background: #e6686d;
   margin-left: 125px;
   width: 109px;
   border-radius: 2px;
 }
-section.portfolio .works {
+.windows {
+  overflow: hidden;
+  width: 930px;
+  height: 558px;
+  margin: 40px auto;
+  box-shadow: 0 0 3px #aaaaaa;
+  border-radius: 3px;
   position: relative;
-  height: 576px;
+  background: #f2f2f2;
 }
-section.portfolio .works .workOne,
-section.portfolio .works .workTwo,
-section.portfolio .works .workThree {
+.windows svg#left {
   position: absolute;
+  top: 40%;
+  left: 15px;
+}
+.windows svg#right {
+  position: absolute;
+  top: 40%;
+  right: 15px;
+}
+.windows>svg{
+  transition: all 0.3s;
+  fill: #f2f2f2;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+}
+.windows>svg:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.windows .images {
+  display: flex;
+  align-items: flex-start;
+  transition: transform 0.5s;
+}
+.windows .images div {
+  flex-shrink: 0;
+  margin: 0;
+  filter: brightness(70%);
+  position: relative;
+}
+.windows .images div .slidesInner{
+  position: absolute;
+  text-align: center;
+  left: 10%;
+  bottom: 5%;
+  font-size: 30px;
+  font-family: 'Kai';
+  font-weight: bold;
+  color: #9da0a7;
+  filter: brightness(100%);
+  transition: all 0.3s;
+}
+.windows:hover .images div .slidesInner{
+  transform: translateY(-60px);
+}
+.windows .images div .slidesInner span{
+  margin: 10px 0;
+  display: block;
+}
+.windows .images div svg{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: rgba(214, 204, 204, 0);
+  padding: 5px;
+  transition: all 0.3s;
+  border-radius: 4px;
+}
+.windows .images div .beginCode:hover,
+.windows .images div .preview:hover{
+  background: rgba(214, 204, 204, 0.3);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.windows .images div .beginCode{
+  left: 10%;
+  bottom: -15%;
+  border: 1px solid white;
+  fill: #e6686d;
+  transition: 0.4s;
+}
+.windows .images div .preview{
+  left: 22%;
+  bottom: -15%;
+  border: 1px solid white;
+  fill: #e6686d;
+  transition: 0.6s;
+}
+.windows:hover .images div .beginCode{
+  bottom: 5%;
+}
+.windows:hover .images div .preview{
+  bottom: 5%;
+}
+.windows .images div .jsLogo{
+  left: 12%;
+  bottom: 14%;
+  fill: white;
+  width: 50px;
+  height: 50px;
+}
+.windows .images div .jqueryLogo{
+  left: 12%;
+  bottom: 14%;
+  fill: white;
+  width: 40px;
+  height: 40px;
+}
+.windows .images div .cookieLogo{
+  left: 19%;
+  bottom: 15%;
+  fill: white;
+  width: 40px;
+  height: 40px;
+}
+.windows .images div .canvasLogo{
+  left: 18%;
+  bottom: 13%;
+  fill: white;
+  width: 50px;
+  height: 50px;
+}
+.windows .images div .timeLogo{
+  left: 18%;
+  bottom: 14%;
+  fill: white;
+  width: 40px;
+  height: 40px;
+}
+.windows:hover .images div .jsLogo{
+  bottom: 24%;
+}
+.windows:hover .images div .jqueryLogo{
+  bottom: 24%;
+}
+.windows:hover .images div .cookieLogo{
+  bottom: 25%;
+}
+.windows:hover .images div .canvasLogo{
+  bottom: 23%;
+}
+.windows:hover .images div .timeLogo{
+  bottom: 24%;
 }

@@ -127,37 +127,37 @@
             <li>
                 <h3>HTML 5 &amp; CSS 3</h3>
                 <div class="progressBar">
-                    <div class="progress"></div>
+                    <div class="progress" id="proOne"></div>
                 </div>
             </li>
             <li>
                 <h3>JavaScript</h3>
                 <div class="progressBar">
-                    <div class="progress"></div>
+                    <div class="progress" id="proTwo"></div>
                 </div>
             </li>
             <li>
                 <h3>jQuery</h3>
                 <div class="progressBar">
-                    <div class="progress"></div>
+                    <div class="progress" id="proThree"></div>
                 </div>
             </li>
             <li>
                 <h3>Vue</h3>
                 <div class="progressBar">
-                    <div class="progress"></div>
+                    <div class="progress" id="proFour"></div>
                 </div>
             </li>
             <li>
                 <h3>React</h3>
                 <div class="progressBar">
-                    <div class="progress"></div>
+                    <div class="progress" id="proFive"></div>
                 </div>
             </li>
             <li>
                 <h3>HTTP</h3>
                 <div class="progressBar">
-                    <div class="progress"></div>
+                    <div class="progress" id="proSix"></div>
                 </div>
             </li>
         </ol>
@@ -165,33 +165,93 @@
 
     <section data-high id="portfolio" class="portfolio">
         <h2>作 品 集</h2>
-        <nav class="clearfix">
-            <ol>
-                <li id="portfolioAll">所 有</li>
-                <li id="portfolioFrame">框 架</li>
-                <li id="portfolioNative">原 生 JS &amp; CSS</li>
-            </ol>
-            <div class="bar">
-                <div id="barInner" class="stateOne"></div>
-            </div>
-        </nav>
-
-        <div class="works">
-            <div class="workOne" style="top:0 ;left:0">
-                <img src="./img/work1.jpg" alt="WorkOne">
-            </div>
-            <div class="workTwo" style="top: 0;left: 636px">
-                <img src="./img/work2.jpg" alt="WorkTwo">
-            </div>
-            <div class="workThree" style="top: 298px;left: 636px">
-                <img src="./img/work3.jpg" alt="WorkThree">
+        <div id="slideWrapper">
+            <nav class="clearfix">
+                <ol id="buttons">
+                    <li id="portfolioAll" class="active">所 有</li>
+                    <li id="portfolioFrame">框 架</li>
+                    <li id="portfolioNative">原 生 JS &amp; CSS</li>
+                </ol>
+                <div class="bar">
+                    <div id="barInner" class="state0"></div>
+                </div>
+            </nav>
+            <div class="windows">
+                <svg id="left" class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-left"></use>
+                </svg>
+                <svg id="right" class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-right"></use>
+                </svg>
+                <div id="slides" class="images">
+                    <div>
+                        <svg class="icon jqueryLogo" aria-hidden="true">
+                            <use xlink:href="#icon-jquery"></use>
+                        </svg>
+                        <svg class="icon timeLogo" aria-hidden="true">
+                            <use xlink:href="#icon-set-time"></use>
+                        </svg>
+                        <div class="slidesInner">
+                            <span>无 缝 轮 播</span>
+                        </div>
+                        <svg class="icon beginCode" aria-hidden="true">
+                            <use xlink:href="#icon-github-skills"></use>
+                        </svg>
+                        <svg class="icon preview" aria-hidden="true">
+                            <use xlink:href="#icon-fangdajing"></use>
+                        </svg>
+                        <img src="./img/demo-slide.png" alt="Slide" width=930>
+                    </div>
+                    <div>
+                        <svg class="icon jsLogo" aria-hidden="true">
+                            <use xlink:href="#icon-java-script"></use>
+                        </svg>
+                        <svg class="icon cookieLogo" aria-hidden="true">
+                            <use xlink:href="#icon-huoquHTMLCookiezhi-"></use>
+                        </svg>
+                        <div class="slidesInner">
+                            <span>导 航 网 站</span>
+                        </div>
+                        <svg class="icon beginCode" aria-hidden="true">
+                            <use xlink:href="#icon-github-skills"></use>
+                        </svg>
+                        <svg class="icon preview" aria-hidden="true">
+                            <use xlink:href="#icon-fangdajing"></use>
+                        </svg>
+                        <img src="./img/demo-nav.jpeg" alt="Nav" width=930>
+                    </div>
+                    <div>
+                        <svg class="icon jsLogo" aria-hidden="true">
+                            <use xlink:href="#icon-java-script"></use>
+                        </svg>
+                        <svg class="icon canvasLogo" aria-hidden="true">
+                            <use xlink:href="#icon-canvas"></use>
+                        </svg>
+                        <div class="slidesInner">
+                            <span>在 线 画 板</span>
+                        </div>
+                        <svg class="icon beginCode" aria-hidden="true">
+                            <use xlink:href="#icon-github-skills"></use>
+                        </svg>
+                        <svg class="icon preview" aria-hidden="true">
+                            <use xlink:href="#icon-fangdajing"></use>
+                        </svg>
+                        <img src="./img/demo-canvas.png" alt="Canvas" width=930>
+                    </div>
+                </div>
             </div>
         </div>
-
     </section>
+
 </body>
+
+
 <script src="https://cdn.bootcss.com/tween.js/r14/Tween.min.js"></script>
+<script src="./js/jquery-3.4.1.min.js"></script>
+<script src="./js/slide-control.js"></script>
 <script src="./js/main.js"></script>
+<script src="//at.alicdn.com/t/font_1492710_aglra84q7jp.js"></script>
 <script src="//at.alicdn.com/t/font_1471429_epr33qww6s.js"></script>
+<script src="//at.alicdn.com/t/font_1510069_go37773q87.js"></script>
 
 </html>
