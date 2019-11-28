@@ -3,7 +3,6 @@ let $slides = $('#slides')
 let $images = $slides.children('div')
 let $bar = $('#barInner')
 let $slideWrapper = $('#slideWrapper')
-console.log($bar)
 let current = 0 //初始化当前图片对应的状态值
 
 makeFakeSlides() //创建假的滑动层
@@ -20,7 +19,7 @@ makeTimer() //自动播放
 function makeFakeSlides() {
 
     let $firstCopy = $images.eq(0).clone(true) //克隆第一张
-    let $lastCopy = $images.eq(2).clone(true) //克隆最后一张
+    let $lastCopy = $images.eq(3).clone(true) //克隆最后一张
     $slides.append($firstCopy) //第一张放在最后
     $slides.prepend($lastCopy) //最后一张放在最前
 

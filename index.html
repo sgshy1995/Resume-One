@@ -7,14 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/loading.css">
-    <title>Document</title>
+    <title>My Resume</title>
 </head>
 
 <body>
-    <div id="guide" class="guide active">
+    <!-- Loading动画 -->
+    <!-- <div id="guide" class="guide active">
         <div class="loading"></div>
         <p class="textLoading">L o a d i n g . . .</p>
-    </div>
+    </div> -->
     <div id="topNavBar" class="topNavBar clearfix">
         <a href="" class="logo">
             <span class="eden">EDEN</span>
@@ -30,9 +31,10 @@
                         <li>参 与 项 目</li>
                         <li>框 架</li>
                         <li>CSS 动 画</li>
+                        <li>前 后 端 分 离</li>
                     </ul>
                 </li>
-                <li><a href="#blog">博 客</a></li>
+                <li><a href="#message">留 言</a></li>
                 <li class="menuTrigger">
                     <a href="#story">经 历</a>
                     <ul class="submenu">
@@ -42,7 +44,7 @@
                     </ul>
                 </li>
                 <li><a href="#github">G I T</a></li>
-                <li><a href="#others">其 他</a></li>
+                <li><a href="#blog">博 客</a></li>
             </ul>
         </nav>
     </div>
@@ -168,9 +170,10 @@
         <div id="slideWrapper">
             <nav class="clearfix">
                 <ol id="buttons">
-                    <li id="portfolioAll" class="active">所 有</li>
-                    <li id="portfolioFrame">框 架</li>
-                    <li id="portfolioNative">原 生 JS &amp; CSS</li>
+                    <li id="portfolioJQuery" class="active">jQuery</li>
+                    <li id="portfolioJS">JS &amp; Cookie</li>
+                    <li id="portfolioCanvas">Canvas</li>
+                    <li id="portfolioAJAX">AJAX &amp; JSON</li>
                 </ol>
                 <div class="bar">
                     <div id="barInner" class="state0"></div>
@@ -186,10 +189,10 @@
                 <div id="slides" class="images">
                     <div>
                         <svg class="icon jqueryLogo" aria-hidden="true">
-                            <use xlink:href="#icon-jquery"></use>
+                            <use xlink:href="#icon-jquery1"></use>
                         </svg>
                         <svg class="icon timeLogo" aria-hidden="true">
-                            <use xlink:href="#icon-set-time"></use>
+                            <use xlink:href="#icon-time"></use>
                         </svg>
                         <div class="slidesInner">
                             <span>无 缝 轮 播</span>
@@ -238,9 +241,44 @@
                         </svg>
                         <img src="./img/demo-canvas.png" alt="Canvas" width=930>
                     </div>
+                    <div>
+                        <svg class="icon ajaxLogo" aria-hidden="true">
+                            <use xlink:href="#icon-ajax"></use>
+                        </svg>
+                        <svg class="icon jsonLogo" aria-hidden="true">
+                            <use xlink:href="#icon-json01"></use>
+                        </svg>
+                        <div class="slidesInner" id="longType">
+                            <span>同 源 &amp; 跨 域</span>
+                        </div>
+                        <svg class="icon beginCode" aria-hidden="true">
+                            <use xlink:href="#icon-github-skills"></use>
+                        </svg>
+                        <svg class="icon preview" aria-hidden="true">
+                            <use xlink:href="#icon-fangdajing"></use>
+                        </svg>
+                        <img src="./img/demo-ajax.png" alt="AJAX" width=930>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+    
+    <section data-high class="message" id="message">
+        <h2>留 言 板</h2>
+        <ol id="messageList">
+            <div>
+                <input type="text" placeholder="S e a r c h" id="searchMessage">
+                <svg class="icon jsonLogo" aria-hidden="true" id="searchLogo">
+                    <use xlink:href="#icon-search"></use>
+                </svg>
+            </div>
+        </ol>
+        <form action="" id="postMessageForm">
+            <input type="text" placeholder="N a m e" name="name">
+            <input type="text" placeholder="C o n t e n t" name="content">
+            <input type="submit" value="Save">
+        </form>
     </section>
 
 </body>
@@ -248,10 +286,13 @@
 
 <script src="https://cdn.bootcss.com/tween.js/r14/Tween.min.js"></script>
 <script src="./js/jquery-3.4.1.min.js"></script>
-<script src="./js/slide-control.js"></script>
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage@4.0.0/dist/av-min.js"></script>
 <script src="./js/main.js"></script>
+<script src="./js/slide-control.js"></script>
+<script src="./js/message.js"></script>
 <script src="//at.alicdn.com/t/font_1492710_aglra84q7jp.js"></script>
 <script src="//at.alicdn.com/t/font_1471429_epr33qww6s.js"></script>
-<script src="//at.alicdn.com/t/font_1510069_go37773q87.js"></script>
+<script src="//at.alicdn.com/t/font_1510069_5tcjcj6zz4h.js"></script>
+<script src="//at.alicdn.com/t/font_1534658_6lklm65552.js"></script>
 
 </html>

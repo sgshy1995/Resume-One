@@ -1,14 +1,10 @@
-/*var newscript = document.createElement('script')
-newscript.setAttribute('type','text/javascript')
-newscript.setAttribute('src','https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.3.1/Tween.min.js')
-var head = document.getElementsByTagName('head')[0]
-head.appendChild(newscript)*/
-
-setTimeout(
+//Loading动画
+/* setTimeout(
     function () {
         guide.classList.remove("active");
     }, 2000
-)
+) */
+
 let liTags = document.querySelectorAll('nav.menu > ul > li')  //console.log(aTags) 打印出一个数组
 for (let i = 0; i < liTags.length; i++) {  //遍历数组
     liTags[i].onmouseenter = function (sgs) {
@@ -64,15 +60,6 @@ for (let i = 0; i < aTags.length; i++) {
     }
 }
 
-portfolioAll.onclick = function () {
-    barInner.className = 'stateOne'
-}
-portfolioFrame.onclick = function () {
-    barInner.className = 'stateTwo'
-}
-portfolioNative.onclick = function () {
-    barInner.className = 'stateThree'
-}
 
 //便利所有标记标签默认样式offset
 let specTags = document.querySelectorAll('[data-high]')

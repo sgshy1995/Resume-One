@@ -136,6 +136,7 @@ body main {
 }
 .topNavBar >nav>ul>li .submenu {
   display: none;
+  z-index: 2;
 }
 .topNavBar> nav>ul>li.active .submenu {
   display: block;
@@ -180,6 +181,7 @@ body main {
   margin-right: auto;
   background: #ffffff;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  z-index: 0;
 }
 .userCard h1 {
   color: #3d4450;
@@ -402,6 +404,7 @@ section.portfolio nav ol li {
   float: left;
   margin-left: 40px;
   font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
   cursor: pointer;
 }
 section.portfolio nav ol li:nth-child(1) {
@@ -418,21 +421,28 @@ section.portfolio nav .bar #barInner {
 section.portfolio nav .bar #barInner.state0 {
   height: 100%;
   background: #e6686d;
-  width: 50px;
+  width: 55px;
   border-radius: 2px;
 }
 section.portfolio nav .bar #barInner.state1 {
   height: 100%;
   background: #e6686d;
-  margin-left: 50px;
-  width: 75px;
+  margin-left: 55px;
+  width: 112px;
   border-radius: 2px;
 }
 section.portfolio nav .bar #barInner.state2 {
   height: 100%;
   background: #e6686d;
-  margin-left: 125px;
-  width: 109px;
+  margin-left: 167px;
+  width: 89px;
+  border-radius: 2px;
+}
+section.portfolio nav .bar #barInner.state3 {
+  height: 100%;
+  background: #e6686d;
+  margin-left: 256px;
+  width: 101px;
   border-radius: 2px;
 }
 .windows {
@@ -485,9 +495,12 @@ section.portfolio nav .bar #barInner.state2 {
   font-size: 30px;
   font-family: 'Kai';
   font-weight: bold;
-  color: #9da0a7;
+  color: white;
   filter: brightness(100%);
   transition: all 0.3s;
+}
+.windows .images div .slidesInner#longType{
+  left: 8%;
 }
 .windows:hover .images div .slidesInner{
   transform: translateY(-60px);
@@ -495,6 +508,7 @@ section.portfolio nav .bar #barInner.state2 {
 .windows .images div .slidesInner span{
   margin: 10px 0;
   display: block;
+  cursor: default;
 }
 .windows .images div svg{
   position: absolute;
@@ -545,6 +559,13 @@ section.portfolio nav .bar #barInner.state2 {
   width: 40px;
   height: 40px;
 }
+.windows .images div .ajaxLogo{
+  left: 12%;
+  bottom: 14%;
+  fill: white;
+  width: 40px;
+  height: 40px;
+}
 .windows .images div .cookieLogo{
   left: 19%;
   bottom: 15%;
@@ -566,6 +587,13 @@ section.portfolio nav .bar #barInner.state2 {
   width: 40px;
   height: 40px;
 }
+.windows .images div .jsonLogo{
+  left: 18%;
+  bottom: 14%;
+  fill: white;
+  width: 40px;
+  height: 40px;
+}
 .windows:hover .images div .jsLogo{
   bottom: 24%;
 }
@@ -580,4 +608,55 @@ section.portfolio nav .bar #barInner.state2 {
 }
 .windows:hover .images div .timeLogo{
   bottom: 24%;
+}
+.windows:hover .images div .ajaxLogo{
+  bottom: 24%;
+}
+.windows:hover .images div .jsonLogo{
+  bottom: 24%;
+}
+section.message > ol{
+  margin: 0 auto;
+  max-width: 930px;
+  background: #ffffff;
+  padding: 50px 0 10px 0;
+  position: relative;
+  border-radius: 3px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+section.message > ol #searchMessage{
+  padding: 10px 15px;
+  width: 86%;
+  border-radius: 5px;
+  border: none;
+  background: #eaebf2;
+  color: black;
+  position: absolute;
+  top: 15px;
+  left: 5%;
+  outline-style: none;
+}
+section.message > ol #searchLogo{
+  position: absolute;
+  top: 24px;
+  left: 840px;
+  cursor: pointer;
+  fill: #747574;
+}
+section.message > ol > li{
+  color: #b9bbc4;
+  margin: 16px 25px;
+  padding: 20px 10px;
+  background: #fefffe;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  cursor: default;
+}
+section.message > h2 {
+  text-align: center;
+  color: #3d4450;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 30px;
 }
