@@ -642,8 +642,40 @@ section.message > ol #searchLogo{
   left: 840px;
   cursor: pointer;
   fill: #747574;
+  transition: all 0.3s;
+}
+section.message > ol #upLogo{
+  position: absolute;
+  fill: #747574;
+  bottom: 3%;
+  right: 15%;
+  background: #eaebf2;
+  border-radius: 50%;
+  padding: 10px;
+  transition: all 0.3s;
+}
+section.message > ol #downLogo{
+  position: absolute;
+  fill: #747574;
+  bottom: 3%;
+  right: 5%;
+  background: #eaebf2;
+  border-radius: 50%;
+  padding: 10px;
+  transition: all 0.3s;
+}
+section.message > ol #upLogo:hover,
+section.message > ol #downLogo:hover{
+  transform: scale(1.2);
+  fill: #e6686d;
+}
+section.message > ol #searchLogo:hover{
+  transform: scale(1.1);
+  fill: #e6686d;
 }
 section.message > ol > li{
+  font-family: 'Kai';
+  font-size: 16px;
   color: #b9bbc4;
   margin: 16px 25px;
   padding: 20px 10px;
@@ -652,6 +684,13 @@ section.message > ol > li{
   border: 1px solid #ccc;
   cursor: default;
 }
+section.message > ol > li:last-child{
+  margin: 16px 25px 60px 25px;
+}
+section.message > ol > li span{
+  color: #e6686d;
+  font-size: 12px;
+}
 section.message > h2 {
   text-align: center;
   color: #3d4450;
@@ -659,4 +698,48 @@ section.message > h2 {
   font-weight: bold;
   line-height: 1.2;
   margin-bottom: 30px;
+}
+section.message form.postMessageForm{
+  text-align: center;
+  margin: 15px 0;
+}
+section.message form.postMessageForm input.nameInput{
+  height: 30px;
+  width: 70px;
+  padding: 0 20px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  margin: 20px 10px;
+  outline: none;
+}
+section.message form.postMessageForm input.contentInput{
+  height: 30px;
+  width: 300px;
+  padding: 0 20px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  margin: 20px 10px;
+  outline: none;
+}
+section.message form.postMessageForm input.submitButton{
+  text-align: center;
+  border-radius: 5px;
+  height: 30px;
+  width: 60px;
+  background-color: rgb(244,244,244);
+  color: #747574;
+  cursor: pointer;
+  transition: all 0.3s;
+  outline: none;
+  border: 1px solid #747574;
+}
+section.message form.postMessageForm input.submitButton:hover{
+  transform: scale(1.2);
+  color: #e6686d;
+  border: 1px solid #e6686d;
+}
+section.message form.postMessageForm span{
+  color: #ccc;
+  font-family: "Microsoft YaHei" ! important;
+  font-size: 14px;
 }

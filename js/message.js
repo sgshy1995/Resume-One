@@ -24,6 +24,16 @@
                 'name': name,
                 'content': content
             })
+            /* if (name === '' || content === '') {
+                alert('您的姓名或者内容不可为空哦！')
+                return undefined
+            } else if (name.substr(0, 1) == ' ' || content.substr(0, 1) == ' ') {
+                alert('您的姓名或者内容不可以空格开头哦！')
+                return undefined
+            }
+            else {
+                return message.save()
+            } */
             return message.save()
         }
     }
@@ -51,7 +61,10 @@
                     //将留言信息创建为li插入ol中
                     array.forEach((item) => {
                         let li = document.createElement('li')
-                        li.innerText = `${item.name}: ${item.content}`
+                        let span = document.createElement('span')
+                        span.innerText = '（游客）'
+                        li.innerText = `${item.name} 说： ${item.content} `
+                        li.append(span)
                         this.myMessageList.append(li)
                     })
                 }, function (error) {
@@ -68,16 +81,26 @@
             let myForm = this.form
             let name = myForm.querySelector('input[name=name]').value
             let content = myForm.querySelector('input[name=content]').value
-            this.model.save(name, content)
+            if (name === '' || content === '') {
+                alert('您的昵称或内容不可为空哦！')               
+            } else if (name.substr(0, 1) === ' ' || content.substr(0, 1) === ' ') {
+                alert('您的昵称或内容不可以空格开头哦！')
+            }
+            else {
+                this.model.save(name, content)
                 .then(function (message) {
                     alert('留言成功，等待管理员审核哦')
                     let li = document.createElement('li')
-                    li.innerText = `${message.attributes.name}: ${message.attributes.content}`
+                    let span = document.createElement('span')
+                    span.innerText = '（游客）'
+                    li.innerText = `${message.attributes.name} 说： ${message.attributes.content} `
                     let myMessageList = document.querySelector('#messageList')
+                    li.append(span)
                     myMessageList.append(li)
                     myForm.querySelector('input[name=name]').value = ''
                     myForm.querySelector('input[name=content]').value = ''
                 })
+            }
         }
     }
 

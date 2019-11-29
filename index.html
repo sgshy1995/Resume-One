@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="./static//favicon.ico" rel="external nofollow" />
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/loading.css">
     <title>My Resume</title>
@@ -268,21 +269,28 @@
         <h2>留 言 板</h2>
         <ol id="messageList">
             <div>
-                <input type="text" placeholder="S e a r c h" id="searchMessage">
+                <input type="text" placeholder="搜 索 · · · · · · （当然啦，这个功能还没有实现奥！）" id="searchMessage">
                 <svg class="icon jsonLogo" aria-hidden="true" id="searchLogo">
                     <use xlink:href="#icon-search"></use>
                 </svg>
             </div>
+            <form action="" id="postMessageForm" class="postMessageForm">
+                <input type="text" placeholder="昵 称" name="name" class="nameInput">
+                <input type="text" placeholder="内 容" name="content" class="contentInput">
+                <input type="submit" value="提 交" class="submitButton">
+                <div><span>请 注 意 ：您 的 昵 称 和 内 容 不 可 为 空 或 以 空 格 开 头 哦 ！</span></div>
+            </form>
+            <svg class="icon jsonLogo" aria-hidden="true" id="upLogo">
+                <use xlink:href="#icon-uparrow"></use>
+            </svg>
+            <svg class="icon jsonLogo" aria-hidden="true" id="downLogo">
+                <use xlink:href="#icon-downarrow"></use>
+            </svg>
         </ol>
-        <form action="" id="postMessageForm">
-            <input type="text" placeholder="N a m e" name="name">
-            <input type="text" placeholder="C o n t e n t" name="content">
-            <input type="submit" value="Save">
-        </form>
+        
     </section>
 
 </body>
-
 
 <script src="https://cdn.bootcss.com/tween.js/r14/Tween.min.js"></script>
 <script src="./js/jquery-3.4.1.min.js"></script>
@@ -293,6 +301,6 @@
 <script src="//at.alicdn.com/t/font_1492710_aglra84q7jp.js"></script>
 <script src="//at.alicdn.com/t/font_1471429_epr33qww6s.js"></script>
 <script src="//at.alicdn.com/t/font_1510069_5tcjcj6zz4h.js"></script>
-<script src="//at.alicdn.com/t/font_1534658_6lklm65552.js"></script>
+<script src="//at.alicdn.com/t/font_1534658_fqs7f2dxitw.js"></script>
 
 </html>
